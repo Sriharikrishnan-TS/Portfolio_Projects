@@ -1,0 +1,165 @@
+/* General layout and font styles */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+}
+
+/* Header Section */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.agent-icon {
+  font-size: 24px;
+  background-color: #e3dfff;
+  color: #6c4de6;
+  border-radius: 8px;
+  padding: 8px;
+  margin-right: 15px;
+}
+
+.header-title {
+  color: #636363 ;
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.header-subtitle {
+  margin: 0;
+  font-size: 18px;
+  color: #888;
+}
+
+.header-right {
+  display: flex;
+  gap: 15px;
+}
+
+.header-button {
+  background-color: #6c4de6;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: white;
+}
+
+/* Message List Section */
+.message-list {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.message-bubble {
+  display: flex;
+  max-width: 60%;
+  padding: 10px 15px;
+  border-radius: 18px;
+}
+
+.agent-bubble {
+  background-color: #ffffff;
+  align-self: flex-start;
+  border: 1px solid #e0e0e0;
+}
+
+.user-bubble {
+  background-color: #d1e7ff;
+  align-self: flex-end;
+}
+
+.bubble-icon {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.message-text {
+  margin: 0;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Input Form Section */
+.input-area {
+  display: flex;
+  padding: 20px;
+  background-color: #ffffff;
+  border-top: 1px solid #e0e0e0;
+}
+
+.input-box {
+  flex: 1;
+  background-color: #6c4de6;
+  color: white;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+}
+
+.send-button {
+  margin-left: 10px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  background-color: #6c4de6;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+.mic-button{
+    margin-left: 10px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  background-color: #6c4de6;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.typing-indicator span {
+  height: 8px;
+  width: 8px;
+  background-color: #9E9E9E;
+  border-radius: 50%;
+  display: inline-block;
+  animation: bounce 1.3s infinite;
+  margin: 0 2px;
+}
+
+.typing-indicator span:nth-of-type(2) {
+  animation-delay: 0.15s;
+}
+
+.typing-indicator span:nth-of-type(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes bounce {
+  0%, 60%, 100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-6px);
+  }
+}

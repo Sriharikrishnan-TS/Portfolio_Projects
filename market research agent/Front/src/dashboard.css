@@ -1,0 +1,155 @@
+/* src/components/Dashboard.css */
+.dashboard {
+  padding: 2vw;
+  width: 94vw;
+  align-items: center;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between; /* spaces elements evenly */
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid white;
+  max-width: 100vw;
+  margin: 0 auto 2rem auto; /* center the whole header */
+  padding: 0.75rem 1rem;
+  box-sizing: border-box;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.dashboard-header .last-updated {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+.logout-button {
+  background: #ffffff;
+  color: #000000;
+  padding: 8px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.logout-button:hover{
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.dashboard-header p {
+  color: #ffffff;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+/* Stat Card Styles */
+.stat-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.stat-card-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-card-title {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.stat-card-value {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+  color: #111827;
+}
+
+.stat-card-trend {
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+}
+
+.trend-text {
+  color: #6b7280;
+  margin-left: 0.25rem;
+}
+
+.trend-positive {
+  color: #22c55e;
+}
+
+.trend-negative {
+  color: #ef4444;
+}
+
+.stat-card-icon {
+  background-color: #eef2ff;
+  color: #4338ca;
+  padding: 0.75rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Chart Container Styles */
+.chart-container {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.chart-container h3 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* Grid Spanning */
+.grid-col-span-2 {
+  grid-column: span 3;
+}
+
+.grid-col-span-4 {
+  grid-column: span 4;
+}
+
+.grid-col-span-3 {
+  grid-column: span 1;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.spinner {
+  border: 6px solid #f3f3f3; /* Light gray background */
+  border-top: 6px solid #4A55A2; /* Primary color for the spinning part */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+/* Animation for rotating the spinner */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
