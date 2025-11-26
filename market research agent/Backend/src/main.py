@@ -88,18 +88,6 @@ class Message(BaseModel):
 class ConversationPayload(BaseModel):
     messages: List[Message]
 
-# class ChatRequest(BaseModel):
-#     text: str
-
-# class ChatResponse(BaseModel):
-#     response: str
-
-# class LLMProcessResponse(BaseModel):
-#     status: str
-#     original_text: str
-#     sentiment: str
-#     keywords: List[str]
-#     entities: Dict[str, Any]
 class StartChatResponse(BaseModel):
     thread_id: str
     ai_message: str
@@ -112,9 +100,6 @@ class LLMChatRequest(BaseModel):
 class LLMChatResponse(BaseModel):
     ai_message:str
     status:str
-# Updated Pydantic Model in main.py
-
- # Removed the 'dimensions' field
 
 # ----------------- Existing Endpoints -----------------
 @app.get("/api/dashboard/analytics", response_model=DashboardResponse)
@@ -122,7 +107,7 @@ async def get_dashboard_data():
     """
     Retrieves dashboard data by fetching it from an external database URL.
     """
-    # The URL for your friend's database
+    # The URL for your  database
     DATABASE_URL = "https://vbzml093-5000.inc1.devtunnels.ms/db?text=front_end"
 
     try:
